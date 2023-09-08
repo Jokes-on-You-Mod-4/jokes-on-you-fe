@@ -12,7 +12,7 @@ function HomePage() {
   return (
     <div className="HomePage">
       <h1 className="animate-character">Jokes on You</h1>
-      <img src="/Smiley face1.png" alt="Smiley Face" />
+      {/* <img src="/Smiley face1.png" alt="Smiley Face" /> */}
 
       <div className="category-container">
         {selectedCategory && <p>Selected Category: {selectedCategory}</p>}

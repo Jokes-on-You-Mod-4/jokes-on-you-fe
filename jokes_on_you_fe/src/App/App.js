@@ -1,20 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import HomePage from '../HomePage/HomePage';
-import getData from '../ApiCalls';
-
+import GetData from '../ApiCalls';
 
 function App() {
-getData('localhost:5000/api/v1/trivia?category=<category>')
-.then(data => {
-  console.log(data)
-})
+  const [fetchedData, setFetchedData] = useState(null);
+
+  useEffect(() => {
+    
+    GetData('localhost:5000/api/v1/trivia?category=')
+      .then(data => {
+        console.log(data); 
+        setFetchedData(data); 
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, []);
 
   return (
     <div className="App">
       <header className="App-header">
       </header>
-      <HomePage />
+      <HomePage data={fetchedData} /> 
     </div>
   );
 }

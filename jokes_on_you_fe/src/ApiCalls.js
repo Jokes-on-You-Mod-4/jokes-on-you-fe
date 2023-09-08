@@ -1,6 +1,6 @@
 import React from "react"
 
-async function getData(endpoint){
+async function GetData(endpoint){
   try{
     const response = await fetch(`http://${endpoint}`)
     const data = await response.json()
@@ -10,4 +10,4 @@ async function getData(endpoint){
   }
 }
 
-export default getData
+export default GetData

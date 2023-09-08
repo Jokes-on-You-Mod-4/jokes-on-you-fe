@@ -35,6 +35,11 @@ function HomePage() {
   return (
     <div className="HomePage">
       <h1 className="animate-character">Jokes on You</h1>
+<<<<<<< HEAD
+=======
+      {/* <img src="/Smiley face1.png" alt="Smiley Face" /> */}
+
+>>>>>>> 8c9a56102a0a76f13f0e7b5ab2611b5acb3a3461
       <div className="category-container">
         {selectedCategory && <p>Selected Category: {selectedCategory}</p>}
         <label htmlFor="categorySelector">Select a Joke Category:</label>

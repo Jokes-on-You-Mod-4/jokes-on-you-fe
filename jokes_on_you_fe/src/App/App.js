@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import HomePage from '../HomePage/HomePage';
 import getData from '../ApiCalls';
-
+import TriviaPage from '../TriviaPage/TriviaPage';
 
 function App() {
 getData('localhost:5000/api/v1/trivia?category=<category>')
@@ -14,7 +14,7 @@ getData('localhost:5000/api/v1/trivia?category=<category>')
     <div className="App">
       <header className="App-header">
       </header>
-      <HomePage />
+      <TriviaPage />
     </div>
   );
 }

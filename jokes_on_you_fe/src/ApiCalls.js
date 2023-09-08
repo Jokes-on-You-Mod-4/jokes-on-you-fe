@@ -1,9 +1,9 @@
 import React from "react"
 
-function getData(endpoint){
+async function getData(endpoint){
   try{
     const response = await fetch(`http://${endpoint}`)
-    const data = await response.json
+    const data = await response.json()
     return data;
   } catch (error) {
     console.log(error)

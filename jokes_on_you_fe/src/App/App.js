@@ -1,6 +1,8 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import HomePage from '../HomePage/HomePage';
 import getData from '../ApiCalls';
+
 
 function App() {
 getData('localhost:5000/api/v1/trivia?category=<category>')
@@ -11,19 +13,8 @@ getData('localhost:5000/api/v1/trivia?category=<category>')
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <HomePage />
     </div>
   );
 }

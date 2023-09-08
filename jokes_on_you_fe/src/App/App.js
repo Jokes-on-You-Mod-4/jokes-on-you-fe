@@ -1,7 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
+import getData from '../ApiCalls';
 
 function App() {
+getData('localhost:5000/api/v1/trivia?category=<category>')
+.then(data => {
+  console.log(data)
+})
+
   return (
     <div className="App">
       <header className="App-header">
